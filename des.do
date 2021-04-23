@@ -17,6 +17,8 @@ keep htn country commune idn cons strata psu wt age10 year sex education wealth3
 */
 *** Descriptive statistics
 *drop if country == "India"
+
+
 drop female
 drop bmi
 gen female = (sex == 2)
@@ -37,9 +39,9 @@ label values com cat
 label values hdi  cat 
 
 
-keep htn female education wealth  marital  bmi media airp hins money_problem smoke  com hdi
+keep htn country female education wealth  marital  bmi media airp hins money_problem smoke  com hdi
 
-order htn female education wealth  marital  bmi media airp hins money_problem smoke  com hdi
+order htn country female education wealth  marital  bmi media airp hins money_problem smoke  com hdi
 
 outsheet using df.csv, replace comma
 
